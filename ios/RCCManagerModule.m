@@ -340,7 +340,8 @@ RCT_EXPORT_METHOD(
             controller.modalPresentationStyle = modalPresentationStyle;
         }
     }
-    
+
+    [controller setModalPresentationStyle: UIModalPresentationFullScreen];
     [[RCCManagerModule lastModalPresenterViewController] presentViewController:controller
                                                                       animated:![animationType isEqualToString:@"none"]
                                                                     completion:^(){ resolve(nil); }];
